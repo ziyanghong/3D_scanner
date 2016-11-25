@@ -40,8 +40,8 @@ int main( int argc, char* argv[] )
                 boost::mutex::scoped_try_lock lock( mutex );
                 if( lock.owns_lock() ){
                     //pcl::io::savePCDFile( "cloud.pcd", *cloud, true ); // Binary format
-                    pcl::io::savePCDFile( "cloud.pcd", *cloud, false ); // ASCII format
-                }
+                    pcl::io::savePCDFile( "cloud%.pcd", *cloud, false ); // ASCII format
+                }i
             }
         };
 
